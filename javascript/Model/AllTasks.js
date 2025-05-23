@@ -25,53 +25,34 @@ class AllTasks {
         }
     }
   
-    addJenisPelajaran(oldId, name) {
+    async deleteAllTasks(id) {
       try {
-        const newId = this.generateJenisPelajaranId();
-  
-        if (!name) {
-          throw new Error("nama Kategori Pelajaran are required");
-        }
-  
-        if (oldId === "") {
-          const semuaDataJenisPelajaran =
-            this.getJenisPenilaianfromLocalStorage();
-  
-          const dataBaruJenisPelajaran = new jenisPenilaian(newId, name);
-  
-          semuaDataJenisPelajaran.push(dataBaruJenisPelajaran);
-          this.saveJenisPenilaianToLocalStorage(semuaDataJenisPelajaran);
-          console.log("old id belum ada")
-          alert("you succes for add kategori");
-        } else {
-          this.editjenisPelajaran(oldId, name);
-          console.log("old id sudah ada")
-        }
-      } catch (error) {
-        console.log("error adding in local storage:", error);
-      }
-    }
-    generateJenisPelajaranId() {
-      const timestamp = Date.now().toString().slice(-6);
-      return `KAT-${timestamp}`;
-    }
-    deleteJenisPelajaran(id) {
-      try {
-        if (!id) {
-          throw new Error("invalid ID. ID are required");
-        }
-        let semuaDataJenisPelajaran = this.getJenisPenilaianfromLocalStorage();
-  
-        semuaDataJenisPelajaran = semuaDataJenisPelajaran.filter(
-          (data) => data.jenis_penilaian_id !== id
-        );
-        this.saveJenisPenilaianToLocalStorage(semuaDataJenisPelajaran)
+        const isConfirm = confirm(
+            `apakah anda yakin ingin menghapus data ini ${id}?`
+          );
+
+          if (isConfirm) {
+            const deleteUser = await fetch(
+              `https://68258f1d0f0188d7e72d6675.mockapi.io/api/todos/${id}`,
+              {
+                method: "DELETE",
+              }
+            );
+            // console.log(deleteUser);
+            if (deleteUser.ok) {
+              alert(`data user dengan id ${id} berhasil dihapus`);
+            } else {
+              alert(
+                `data user dengan id ${id} gagal dihapus :${deleteUser.status}`
+              );
+            }
+          }
       } catch (error) {
         console.error("error while delete data:", error);
       }
     }
   
-    editjenisPelajaran(id, newname){
+    editAllTasks(id, newname){
       try {
         if(!id) {
           throw new Error("invalid ID. ID are required");

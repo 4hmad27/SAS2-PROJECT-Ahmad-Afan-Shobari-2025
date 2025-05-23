@@ -32,18 +32,25 @@ async function renderAllTasks() {
     <button id="delete-${AllTasks.id}" class="btn btn-danger">Delete</button>
     </td>
 `;
-
     tableBody.appendChild(row);
-    
+
+    // document.getElementById(`edit-${AllTasks.id}`).addEventListener("click", (event) => {
+    //     event.preventDefault()
+    //     DataAllTasksManager.editAllTasks(AllTasks.id)
+    // })
+
+    document.getElementById(`delete-${AllTasks.id}`).addEventListener("click", (event) => {
+        event.preventDefault()
+        deleteAllTasks(AllTasks.id)
+    })
 });
+
 }
 
-
-function editJenisPelajaran(id) {
-  renderAllTasks();
+function deleteAllTasks(id) {
+    DataAllTasksManager.deleteAllTasks(id);
+    renderAllTasks();
 }
-
-function deleteJenisPelajaran(id) {}
 
 document.addEventListener("DOMContentLoaded", () => {
   renderAllTasks();
