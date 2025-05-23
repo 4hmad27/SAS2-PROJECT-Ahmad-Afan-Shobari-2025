@@ -24,7 +24,7 @@
 
     <title>Kategori Pelajaran - sistem Informasi Akademik</title>
 
-    <link href="./template/css/app.css" rel="stylesheet" />
+    <link href="./styles/css/app.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
@@ -36,11 +36,11 @@
       <nav id="sidebar" class="sidebar js-sidebar">
         <div class="sidebar-content js-simplebar">
           <a class="sidebar-brand" href="index.html">
-            <span class="align-middle">SIAKAD PPQITA</span>
+            <span class="align-middle">Todo App</span>
           </a>
 
           <ul class="sidebar-nav">
-            <li class="sidebar-header">Analisis</li>
+            <li class="sidebar-header">Statistics</li>
 
             <li class="sidebar-item active">
               <a class="sidebar-link" href="index.html">
@@ -49,47 +49,19 @@
               </a>
             </li>
 
-            <li class="sidebar-header">Manajemen Data</li>
+            <li class="sidebar-header">Management</li>
 
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./kategoriPelajaran.html">
+              <a class="sidebar-link" href="./all-tasks.html">
                 <i class="align-middle" data-feather="square"></i>
-                <span class="align-middle">Kategori Pelajaran</span>
+                <span class="align-middle">All Tasks</span>
               </a>
             </li>
 
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./JenisPenilaian.html">
-                <i class="align-middle" data-feather="check-square"></i>
-                <span class="align-middle">Jenis Penilaian</span>
-              </a>
-            </li>
-
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./MataPelajarani.html">
-                <i class="align-middle" data-feather="grid"></i>
-                <span class="align-middle">Mata Pelajaran</span>
-              </a>
-            </li>
-
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./tahunAjaran.html">
-                <i class="align-middle" data-feather="align-left"></i>
-                <span class="align-middle">Tahun ajaran</span>
-              </a>
-            </li>
-
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./Siswa.html">
-                <i class="align-middle" data-feather="user"></i>
-                <span class="align-middle">Siswa</span>
-              </a>
-            </li>
-
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./penilaian.html">
-                <i class="align-middle" data-feather="clipboard"></i>
-                <span class="align-middle">Penilaian</span>
+              <a class="sidebar-link" href="./create-tasks.html">
+                <i class="align-middle" data-feather="square"></i>
+                <span class="align-middle">Create Task</span>
               </a>
             </li>
           </ul>
@@ -207,7 +179,7 @@
                       <div class="row g-0 align-items-center">
                         <div class="col-2">
                           <img
-                            src="./template/img/avatars/avatar-5.jpg"
+                            src="./img/img/avatars/avatar-5.jpg"
                             class="avatar img-fluid rounded-circle"
                             alt="Vanessa Tucker"
                           />
@@ -225,7 +197,7 @@
                       <div class="row g-0 align-items-center">
                         <div class="col-2">
                           <img
-                            src="./template/img/avatars/avatar.jpg"
+                            src="./img/img/avatars/avatar-2.jpg"
                             class="avatar img-fluid rounded-circle"
                             alt="William Harris"
                           />
@@ -243,7 +215,7 @@
                       <div class="row g-0 align-items-center">
                         <div class="col-2">
                           <img
-                            src="./template/img/avatars/avatar-4.jpg"
+                            src="./img/img/avatars/avatar-4.jpg"
                             class="avatar img-fluid rounded-circle"
                             alt="Christina Mason"
                           />
@@ -261,7 +233,7 @@
                       <div class="row g-0 align-items-center">
                         <div class="col-2">
                           <img
-                            src="./template/img/avatars/avatar-3.jpg"
+                            src="./img/img/avatars/avatar-3.jpg"
                             class="avatar img-fluid rounded-circle"
                             alt="Sharon Lessman"
                           />
@@ -288,20 +260,24 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                  <i class="align-middle bg-primary" data-feather="settings"></i>
+                  <i
+                    class="align-middle bg-primary"
+                    data-feather="settings"
+                  ></i>
                 </a>
 
                 <a
                   class="nav-link dropdown-toggle d-flex d-sm-inline-block"
                   href="#"
                   data-bs-toggle="dropdown"
+                  id="hidden-profile"
                 >
                   <img
-                    src="./template/img/avatars/avatar-2.jpg"
+                    src="./img/img/avatars/avatar.jpg"
                     class="avatar img-fluid rounded me-1"
                     alt="Charles Hall"
                   />
-                  <span class="text-dark" id="username"></span>
+                  <span class="text-dark">Charles Hall</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="pages-profile.html"
@@ -334,77 +310,40 @@
 
         <main class="content">
           <div class="container-fluid p-0">
-            <h1 class="h3 mb-3"><strong>Analisis</strong> Dashboard</h1>
+            <h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
 
-			<!-- Content row -->
+            <!-- Content row -->
           </div>
         </main>
 
         <footer class="footer">
-			<div class="container-fluid">
-				<div class="row text-muted">
-					<div class="col-6 text-start">
-						<p class="mb-0">
-					&copy; 2025
+          <div class="container-fluid">
+            <div class="row text-muted text-center">
+              <!-- <div class="col-6 text-start"> -->
+                <p class="mb-0">
+                    <a
+                    class="text-muted"
+                    href="https://adminkit.io/"
+                    target="_blank"
+                    ><strong>Copyright</strong></a
+                    >
+                    &copy; 2025
+                    -
                   <a
                     class="text-muted"
                     href="https://adminkit.io/"
                     target="_blank"
-                    ><strong>SIAKAD PPQITA</strong></a
-                  >
-                  -
-                  <a
-                    class="text-muted"
-                    href="https://adminkit.io/"
-                    target="_blank"
-                    ><strong>Sistem Informasi Akademik</strong></a
+                    ><strong>Todo App by PPQITA</strong></a
                   >
                 </p>
-              </div>
-              <div class="col-6 text-end">
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a
-                      class="text-muted"
-                      href="https://adminkit.io/"
-                      target="_blank"
-                      >Support</a
-                    >
-                  </li>
-                  <li class="list-inline-item">
-                    <a
-                      class="text-muted"
-                      href="https://adminkit.io/"
-                      target="_blank"
-                      >Help Center</a
-                    >
-                  </li>
-                  <li class="list-inline-item">
-                    <a
-                      class="text-muted"
-                      href="https://adminkit.io/"
-                      target="_blank"
-                      >Privacy</a
-                    >
-                  </li>
-                  <li class="list-inline-item">
-                    <a
-                      class="text-muted"
-                      href="https://adminkit.io/"
-                      target="_blank"
-                      >Terms</a
-                    >
-                  </li>
-                </ul>
-              </div>
+              <!-- </div> -->
             </div>
           </div>
         </footer>
       </div>
     </div>
 
-    <script src="/template/js/app.js"></script>
-    <script type="module" src="./Controllers/indexController.js">
-    </script>
+    <script src="./javascript/js/app.js"></script>
+    <script type="module" src="./Controllers/indexController.js"></script>
   </body>
 </html>
