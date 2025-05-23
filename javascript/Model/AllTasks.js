@@ -11,6 +11,19 @@ class AllTasks {
         this.dueDate = dueDate
     }
     
+    async getAllTasks(){
+        try {
+            return await fetch("https://68258f1d0f0188d7e72d6675.mockapi.io/api/todos", {
+                method: "GET",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            ).then((response) => response.json());
+        } catch (error) {
+            console.log("error while getting data", error)
+        }
+    }
   
     addJenisPelajaran(oldId, name) {
       try {
