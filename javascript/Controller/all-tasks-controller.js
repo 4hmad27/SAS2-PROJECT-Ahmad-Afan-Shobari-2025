@@ -11,14 +11,15 @@ editForm.addEventListener("submit", (event) => {
   const title = document.getElementById("title").value;
   const description = document.getElementById("description").value;
   let status = document.getElementById("status").value;
-    if(status === "completed"){
-        status = true;
-    }else{
-        status = false;
-    }
+  if(status === "completed"){
+    status = true;
+  }else{
+    status = false;
+  }
   const dueDate = document.getElementById("due-date").value;
-
+  
   DataAllTasksManager.editAllTasks(oldId,title, description, status, dueDate);
+  // document.getElementById("detailModal").style.display = "none";
   renderAllTasks();
 })
 
@@ -66,6 +67,9 @@ async function renderAllTasks() {
 
 async function editAllTasks(id) {
     // DataAllTasksManager.editAllTasks(id);
+    // document.getElementById("detailModal").style.display = "block";
+
+
     let semuaDataAllTasks = await fetch(`https://68258f1d0f0188d7e72d6675.mockapi.io/api/todos/${id}`);
 
      const dataAllTasks = await semuaDataAllTasks.json()
@@ -76,6 +80,12 @@ async function editAllTasks(id) {
       document.getElementById("title").value = dataAllTasks.title;
       document.getElementById("description").value = dataAllTasks.description;
       document.getElementById("due-date").value = dataAllTasks.dueDate;
+      if(dataAllTasks.is_complated === true){
+        document.getElementById("completed").setAttribute("selected", "true")
+      }else{
+        document.getElementById("not-completed").setAttribute("selected", "true")
+      }
+
 
     console.log("hehe berhasil",id)
     renderAllTasks();

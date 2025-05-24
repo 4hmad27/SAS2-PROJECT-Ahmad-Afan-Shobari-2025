@@ -30,10 +30,7 @@
     <title>Kategori Pelajaran - sistem Informasi Akademik</title>
 
     <link href="./styles/css/app.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
+    
   </head>
 
   <body>
@@ -41,7 +38,7 @@
       <nav id="sidebar" class="sidebar js-sidebar">
         <div class="sidebar-content js-simplebar">
           <a class="sidebar-brand" href="index.html">
-            <span class="align-middle">Todo App</span>
+            <span class="align-middle fs-4" id="logo-all-task">Todo App</span>
           </a>
 
           <ul class="sidebar-nav">
@@ -65,7 +62,7 @@
 
             <li class="sidebar-item">
               <a class="sidebar-link" href="./create-tasks.html">
-                <i class="align-middle" data-feather="square"></i>
+                <i class="align-middle" data-feather="check-square"></i>
                 <span class="align-middle">Create Task</span>
               </a>
             </li>
@@ -266,23 +263,21 @@
                   data-bs-toggle="dropdown"
                 >
                   <i
-                    class="align-middle bg-primary"
+                    class="align-middle"
                     data-feather="settings"
                   ></i>
                 </a>
 
                 <a
-                  class="nav-link dropdown-toggle d-flex d-sm-inline-block"
+                  class="nav-link d-flex custom"
                   href="#"
-                  data-bs-toggle="dropdown"
-                  id="hidden-profile"
                 >
                   <img
                     src="./img/img/avatars/avatar.jpg"
-                    class="avatar img-fluid rounded me-1"
+                    class="avatar img-fluid rounded me-1 custom"
                     alt="Charles Hall"
                   />
-                  <span class="text-dark">Charles Hall</span>
+                  <span class="text-dark custom">Charles Hall</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="pages-profile.html"
@@ -357,7 +352,7 @@
                         id="due-date"
                         class="form-control my-2"
                       />
-                      <button class="btn btn-primary form-control" type="submit">Update task</button>
+                      <button class="btn btn-primary form-control" data-bs-dismiss="modal" type="submit">Update task</button>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -368,22 +363,22 @@
           </div>
 
           <div class="container-fluid p-0">
-            <h1 class="h3 mb-3 fs-1"><strong>All</strong> Task</h1>
+            <h1 class="h3 mb-3 fs-1 fw-light"><strong>All</strong> Task</h1>
 
             <!-- Content row -->
             <div class="table-responsive">
               <table id="all-tasks-table" class="table table-hover">
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>description</th>
-                    <th>Status</th>
-                    <th>Due Date</th>
-                    <th>Actions</th>
+                    <th class="fw-bold">#</th>
+                    <th class="fw-bold fs-4">Title</th>
+                    <th class="fw-bold fs-4">Description</th>
+                    <th class="fw-bold fs-4">Status</th>
+                    <th class="fw-bold fs-4">Due Date</th>
+                    <th class="fw-bold fs-4">Actions</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-group-divider ">
                   <tr>
                     <!-- <td></td> -->
                   </tr>
@@ -396,16 +391,16 @@
 
         <footer class="footer">
           <div class="container-fluid">
-            <div class="row text-muted text-center">
+            <div class="row text-muted text-left"  id="footer">
               <!-- <div class="col-6 text-start"> -->
               <p class="mb-0 fw-bold">
                 <a
                   class="text-muted"
                   href="https://adminkit.io/"
                   target="_blank"
-                  ><strong>Copyright</strong></a
+                  ><strong>Copyright &copy; 2025 -</strong></a
                 >
-                &copy; 2025 -
+                
                 <a
                   class="text-muted"
                   href="https://adminkit.io/"
