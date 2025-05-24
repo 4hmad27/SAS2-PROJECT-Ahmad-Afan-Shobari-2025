@@ -13,7 +13,9 @@ createForm.addEventListener("submit", (e) => {
     }else{
         status = false;
     }
+    const dueDate = document.getElementById("due-date").value;
 
-    DataCreate.addCreateTasks(title, description, status)
 
+    DataCreate.addCreateTasks(title, description, status, dueDate)
+    createForm.reset()
 })

@@ -310,7 +310,7 @@
 
         <main class="content">
           <div class="container-fluid p-0">
-            <h1 class="h3 mb-3"><strong>Create</strong> Task</h1>
+            <h1 class="h3 mb-3 fs-3"><strong>Create</strong> Task</h1>
 
             <form id="create-form" action="">
               <div class="form-group mb-2">
@@ -321,7 +321,6 @@
                   type="text"
                   id="title"
                   name="Title"
-                  placeholder="masukan nama Title"
                 />
                 <label>Description</label>
                 <input
@@ -329,11 +328,10 @@
                   type="text"
                   id="description"
                   name="description"
-                  placeholder="masukan description"
                 />
-                <label>status</label>
+                <label>Status</label>
                 <select name="status" class="form-control select mb-3" id="status" name="status">
-                    <option value="default">-- Pilih status --</option>
+                    <option value="default">-- Pilih Status --</option>
                     <option value="completed">Complated</option>
                     <option value="not-completed">Not Complated</option>
                 </select>
@@ -341,9 +339,8 @@
                 <input
                   class="form-control mb-1"
                   type="date"
-                  id="description"
-                  name="description"
-                  placeholder="masukan description"
+                  id="due-date"
+                  name="due-date"
                 />
               </div>
               <button type="submit" class="btn btn-primary my-2">
