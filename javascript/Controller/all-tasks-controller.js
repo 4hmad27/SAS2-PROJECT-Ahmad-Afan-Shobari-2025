@@ -80,6 +80,12 @@ async function editAllTasks(id) {
       document.getElementById("title").value = dataAllTasks.title;
       document.getElementById("description").value = dataAllTasks.description;
       document.getElementById("due-date").value = dataAllTasks.dueDate;
+      if(dataAllTasks.is_complated === true){
+        document.getElementById("completed").setAttribute("selected", "true")
+      }else{
+        document.getElementById("not-completed").setAttribute("selected", "true")
+      }
+
 
     console.log("hehe berhasil",id)
     renderAllTasks();
