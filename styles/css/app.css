@@ -5,10 +5,14 @@
  * Licensed under MIT (https://github.com/adminkit/adminkit/blob/master/LICENSE)
  */
 
- /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-*{
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed&display=swap');
+/* *{
   font-family: roboto condensed;
 } */
+
+#logo-all-task{
+  font-family: Montserrat;
+}
 
 :root,
 [data-bs-theme="light"] {
@@ -13366,10 +13370,13 @@ span.flatpickr-weekday {
     background-color: #003e99;
   }
  }
- 
+
 @media (max-width: 576px) {
   #footer{
     text-align: center;
+  }
+  .custom{
+    display: none;
   }
  }
 /*# sourceMappingURL=app.css.map*/
