@@ -1,7 +1,7 @@
-import { CreateTasks } from "../Model/CreateTasks.js";
+import { Todos } from "../Model/Todos.js";
 
 const createForm = document.getElementById("create-form");
-const DataCreate = new CreateTasks();
+const DataTodosManager = new Todos();
 
 createForm.addEventListener("submit", (e) => {
     e.preventDefault(); 
@@ -16,6 +16,6 @@ createForm.addEventListener("submit", (e) => {
     const dueDate = document.getElementById("due-date").value;
 
 
-    DataCreate.addCreateTasks(title, description, status, dueDate)
+    DataTodosManager.addCreateTasks(title, description, status, dueDate)
     createForm.reset()
 })

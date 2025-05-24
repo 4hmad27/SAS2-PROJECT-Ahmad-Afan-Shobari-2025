@@ -1,6 +1,6 @@
-import { AllTasks } from "../Model/AllTasks.js";
+import { Todos } from "../Model/Todos.js";
 
-const DataAllTasksManager = new AllTasks();
+const DataTodosManager = new Todos();
 
 const tableBody = document.querySelector("#all-tasks-table tbody");
 const editForm = document.querySelector("#edit-form");
@@ -18,7 +18,7 @@ editForm.addEventListener("submit", (event) => {
   }
   const dueDate = document.getElementById("due-date").value;
   
-  DataAllTasksManager.editAllTasks(oldId,title, description, status, dueDate);
+  DataTodosManager.editAllTasks(oldId,title, description, status, dueDate);
   // document.getElementById("detailModal").style.display = "none";
   renderAllTasks();
 })
@@ -93,7 +93,7 @@ async function editAllTasks(id) {
 
 
 function deleteAllTasks(id) {
-    DataAllTasksManager.deleteAllTasks(id);
+    DataTodosManager.deleteAllTasks(id);
     renderAllTasks();
 }
 
