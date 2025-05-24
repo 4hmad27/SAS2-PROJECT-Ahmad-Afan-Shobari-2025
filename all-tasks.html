@@ -30,10 +30,7 @@
     <title>Kategori Pelajaran - sistem Informasi Akademik</title>
 
     <link href="./styles/css/app.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
+    
   </head>
 
   <body>
@@ -281,8 +278,9 @@
                     src="./img/img/avatars/avatar.jpg"
                     class="avatar img-fluid rounded me-1"
                     alt="Charles Hall"
+                    id="hidden-profile"
                   />
-                  <span class="text-dark">Charles Hall</span>
+                  <span class="text-dark" id="hidden-profile">Charles Hall</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="pages-profile.html"
@@ -368,22 +366,22 @@
           </div>
 
           <div class="container-fluid p-0">
-            <h1 class="h3 mb-3 fs-1"><strong>All</strong> Task</h1>
+            <h1 class="h3 mb-3 fs-1 fw-light"><strong>All</strong> Task</h1>
 
             <!-- Content row -->
             <div class="table-responsive">
               <table id="all-tasks-table" class="table table-hover">
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>description</th>
-                    <th>Status</th>
-                    <th>Due Date</th>
-                    <th>Actions</th>
+                    <th class="fw-bold">#</th>
+                    <th class="fw-bold">Title</th>
+                    <th class="fw-bold">description</th>
+                    <th class="fw-bold">Status</th>
+                    <th class="fw-bold">Due Date</th>
+                    <th class="fw-bold">Actions</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-group-divider">
                   <tr>
                     <!-- <td></td> -->
                   </tr>
@@ -396,16 +394,16 @@
 
         <footer class="footer">
           <div class="container-fluid">
-            <div class="row text-muted text-center">
+            <div class="row text-muted text-left"  id="footer">
               <!-- <div class="col-6 text-start"> -->
               <p class="mb-0 fw-bold">
                 <a
                   class="text-muted"
                   href="https://adminkit.io/"
                   target="_blank"
-                  ><strong>Copyright</strong></a
+                  ><strong>Copyright &copy; 2025 -</strong></a
                 >
-                &copy; 2025 -
+                
                 <a
                   class="text-muted"
                   href="https://adminkit.io/"

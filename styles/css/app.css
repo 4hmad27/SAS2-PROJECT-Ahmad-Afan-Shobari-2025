@@ -4,6 +4,12 @@
  * Copyright 2023 AdminKit
  * Licensed under MIT (https://github.com/adminkit/adminkit/blob/master/LICENSE)
  */
+
+ /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+*{
+  font-family: roboto condensed;
+} */
+
 :root,
 [data-bs-theme="light"] {
   --bs-blue: #3b7ddd;
@@ -13354,12 +13360,16 @@ span.flatpickr-weekday {
   -moz-appearance: textfield;
 }
 
-/* @media (width >= 768px) {
-  
-  } */
-@media (width >= 375px) {
-    a#hidden-profile{
-      display: none;
-    }
+@include media-breakpoint-up(sm) { 
+  #hidden-profile{
+    display: none;
+    background-color: #003e99;
   }
+ }
+ 
+@media (max-width: 576px) {
+  #footer{
+    text-align: center;
+  }
+ }
 /*# sourceMappingURL=app.css.map*/
