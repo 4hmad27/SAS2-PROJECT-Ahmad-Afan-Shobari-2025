@@ -1,4 +1,5 @@
-class Todos {
+// import { renderAllTasks } from "../Controller/all-tasks-controller.js";
+class TodoList {
   async getAllTasks() {
     try {
       return await fetch(
@@ -14,6 +15,7 @@ class Todos {
       console.log("error while getting data", error);
     }
   }
+  
 
   async deleteAllTasks(id) {
     try {
@@ -28,7 +30,6 @@ class Todos {
             method: "DELETE",
           }
         );
-        // console.log(deleteUser);
         if (deleteUser.ok) {
           alert(`data user dengan id ${id} berhasil dihapus`);
         } else {
@@ -44,7 +45,10 @@ class Todos {
 
   async editAllTasks(id, title, description, status, date) {
     try {
-        console.log(id, title, description, status, date);
+      console.log(id, title, description, status, date);
+      if(!id, !title, !description, !status, !date){
+        throw new error("halah eroro", error)
+      }
       const editData = await fetch(
         `https://68258f1d0f0188d7e72d6675.mockapi.io/api/todos/${id}`,
         {
@@ -53,17 +57,17 @@ class Todos {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            "title": title,
-            "description": description,
-            "is_completed": status,
-            "dueDate": date,
+            title: title,
+            description: description,
+            is_completed: status,
+            dueDate: date,
           }),
         }
       );
       console.log(editData);
-    //   if (!response.ok) {
-    //     throw new Error(`HTTP error! status: ${response.status}`);
-    //   }
+      if (!editData.ok) {
+        throw new Error(`HTTP error! status: ${editData.status}`);
+      }
 
       const data = await editData.json();
       console.log(data);
@@ -75,34 +79,34 @@ class Todos {
 
   async addCreateTasks(title, description, status, dueDate) {
     try {
-      console.log(title, description, status, dueDate)
+      console.log(title, description, status, dueDate);
 
       const response = await fetch(
         "https://68258f1d0f0188d7e72d6675.mockapi.io/api/todos",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              "title": title,
-              "description": description,
-              "is_completed": status,
-              "dueDate": dueDate,
-            }),
-          }
-        );
-        console.log(response);
-
-        if (!response.ok) {
-          throw new error(`HTTP error! status: ${response.status}`);
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: title,
+            description: description,
+            is_completed: status,
+            dueDate: dueDate,
+          }),
         }
+      );
+      console.log(response);
 
-        const data = await response.json();
-        console.log(data);
+      if (!response.ok) {
+        throw new error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log(data);
     } catch (error) {
       console.log("error adding in database:", error);
     }
   }
 }
-export { Todos };
+export { TodoList }

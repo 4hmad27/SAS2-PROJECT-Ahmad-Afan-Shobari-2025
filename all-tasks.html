@@ -265,16 +265,10 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                  <i
-                    class="align-middle"
-                    data-feather="settings"
-                  ></i>
+                  <i class="align-middle" data-feather="settings"></i>
                 </a>
 
-                <a
-                  class="nav-link d-flex custom"
-                  href="#"
-                >
+                <a class="nav-link d-flex custom" href="#">
                   <img
                     src="./img/img/avatars/avatar.jpg"
                     class="avatar img-fluid rounded me-1 custom"
@@ -312,54 +306,84 @@
         </nav>
 
         <main class="content">
-          
-          <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
+          <div
+            class="modal fade"
+            id="detailModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-xl  w-50">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Details</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Edit Task
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">
-                    <form action="" id="edit-form">
-                      <input type="text" name="oldId" id="oldId" class="form-control my-2" hidden>
-                      <label for="">Title</label>
-                      <input
-                        type="text"
-                        name="title"
-                        id="title"
-                        class="form-control my-2"
-                      />
-                      <label for="">Description</label>
-                      <input
-                        type="text"
-                        name="description"
-                        id="description"
-                        class="form-control my-2"
-                      />
-                      <label for="">Status</label>
-                      <select
-                        name="status"
-                        id="status"
-                        class="form-control my-2"
-                        id="status"
-                      >
-                        <option value="default" id="default">-- Pilih Status --</option>
-                        <option value="completed" id="completed">Complated</option>
-                        <option value="not-completed" id="not-completed">Not Complated</option>
-                      </select>
-                      <label for="">Due Date</label>
-                      <input
-                        type="date"
-                        name="due date"
-                        id="due-date"
-                        class="form-control my-2"
-                      />
-                      <button class="btn btn-primary form-control" data-bs-dismiss="modal" type="submit">Update task</button>
-                    </form>
+                  <form action="" id="edit-form">
+                    <input
+                      type="text"
+                      name="oldId"
+                      id="oldId"
+                      class="form-control my-2"
+                      hidden
+                    />
+                    <label for="">Title</label>
+                    <input
+                      type="text"
+                      name="title"
+                      id="title"
+                      class="form-control my-2"
+                    />
+                    <label for="">Description</label>
+                    <input
+                      type="text"
+                      name="description"
+                      id="description"
+                      class="form-control my-2"
+                    />
+                    <label for="">Status</label>
+                    <select
+                      name="status"
+                      id="status"
+                      class="form-control my-2"
+                      id="status"
+                    >
+                      <option value="default" id="default">
+                        -- Pilih Status --
+                      </option>
+                      <option value="completed" id="completed">
+                        Complated
+                      </option>
+                      <option value="not-completed" id="not-completed">
+                        Not Complated
+                      </option>
+                    </select>
+                    <label for="">Due Date</label>
+                    <input
+                      type="date"
+                      name="due date"
+                      id="due-date"
+                      class="form-control my-2"
+                    />
+                    <button
+                      class="btn btn-primary form-control"
+                      data-bs-dismiss="modal"
+                      type="submit"
+                    >
+                      Update task
+                    </button>
+                  </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  
                 </div>
               </div>
             </div>
@@ -381,7 +405,7 @@
                     <th class="fw-bold fs-4">Actions</th>
                   </tr>
                 </thead>
-                <tbody class="table-group-divider ">
+                <tbody class="table-group-divider">
                   <tr>
                     <!-- <td></td> -->
                   </tr>
@@ -394,8 +418,7 @@
 
         <footer class="footer">
           <div class="container-fluid">
-            <div class="row text-muted text-left"  id="footer">
-              <!-- <div class="col-6 text-start"> -->
+            <div class="row text-muted text-left" id="footer">
               <p class="mb-0 fw-bold">
                 <a
                   class="text-muted"
@@ -403,7 +426,7 @@
                   target="_blank"
                   ><strong>Copyright &copy; 2025 -</strong></a
                 >
-                
+
                 <a
                   class="text-muted"
                   href="https://adminkit.io/"
@@ -411,7 +434,6 @@
                   ><strong>Todo App by PPQITA</strong></a
                 >
               </p>
-              <!-- </div> -->
             </div>
           </div>
         </footer>
