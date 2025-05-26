@@ -100,7 +100,6 @@ editForm.addEventListener("submit", (event) => {
 //function delete
 function deleteAllTasks(id) {
   DataTodoListManagers.deleteAllTasks(id);
-  
 }
 
 document.addEventListener("DOMContentLoaded", () => {
