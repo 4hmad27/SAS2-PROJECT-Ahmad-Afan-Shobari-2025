@@ -28,10 +28,10 @@ const editForm = document.querySelector("#edit-form");
 
     row.innerHTML = `
     <td>${AllTasks.id}</td>
-    <td>${AllTasks.title}</td>
-    <td>${AllTasks.description}</td>
-    <td>${AllTasks.is_complated === true ? "complated" : "not complated"}</td>
-    <td>${AllTasks.dueDate}</td>
+    <td class="fs-4">${AllTasks.title}</td>
+    <td class="fs-4">${AllTasks.description}</td>
+    <td class="fs-4">${AllTasks.is_complated === true ? "complated" : "not complated"}</td>
+    <td class="fs-4">${AllTasks.dueDate}</td>
     <td>
     <button id="edit-${
       AllTasks.id
