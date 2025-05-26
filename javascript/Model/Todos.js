@@ -57,6 +57,8 @@ class TodoList {
 
       const data = await editData.json();
       console.log(data);
+      
+      window.location.href = "./all-tasks.html";
       alert(`data user dengan id ${id} berhasil diupdate`);
     } catch (error) {
       console.error("error while editing data:", error);
