@@ -6,24 +6,8 @@ const DataTodoListManagers = new TodoList();
 const tableBody = document.querySelector("#all-tasks-table tbody");
 const editForm = document.querySelector("#edit-form");
 
-editForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const oldId = document.getElementById("oldId").value;
-  const title = document.getElementById("title").value;
-  const description = document.getElementById("description").value;
-  let status = document.getElementById("status").value;
-  if (status === "completed") {
-    status = true;
-  } else {
-    status = false;
-  }
-  const dueDate = document.getElementById("due-date").value;
 
-  DataTodoListManagers.editAllTasks(oldId, title, description, status, dueDate);
-
-  window.location.href = "./all-tasks.html";
-});
-
+//function render
   async function renderAllTasks() {
   tableBody.innerHTML = "";
 
@@ -73,6 +57,7 @@ editForm.addEventListener("submit", (event) => {
   });
 }
 
+//function edit
 async function editAllTasks(id) {
   let semuaDataAllTasks = await fetch(
     `https://68258f1d0f0188d7e72d6675.mockapi.io/api/todos/${id}`
@@ -93,9 +78,27 @@ async function editAllTasks(id) {
   }
 
   console.log("hehe berhasil", id);
-  // renderAllTasks();
 }
 
+editForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const oldId = document.getElementById("oldId").value;
+  const title = document.getElementById("title").value;
+  const description = document.getElementById("description").value;
+  let status = document.getElementById("status").value;
+  if (status === "completed") {
+    status = true;
+  } else {
+    status = false;
+  }
+  const dueDate = document.getElementById("due-date").value;
+
+  DataTodoListManagers.editAllTasks(oldId, title, description, status, dueDate);
+
+  window.location.href = "./all-tasks.html";
+});
+
+//function delete
 function deleteAllTasks(id) {
   DataTodoListManagers.deleteAllTasks(id);
   
