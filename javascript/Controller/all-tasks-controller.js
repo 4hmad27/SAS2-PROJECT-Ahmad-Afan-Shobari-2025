@@ -30,7 +30,7 @@ const editForm = document.querySelector("#edit-form");
     <td>${AllTasks.id}</td>
     <td class="fs-4">${AllTasks.title}</td>
     <td class="fs-4">${AllTasks.description}</td>
-    <td class="fs-4">${AllTasks.is_complated === true ? "complated" : "not complated"}</td>
+    <td class="fs-4">${AllTasks.is_completed === true ? "complated" : "not complated"}</td>
     <td class="fs-4">${AllTasks.dueDate}</td>
     <td>
     <button id="edit-${
@@ -71,13 +71,13 @@ async function editAllTasks(id) {
   document.getElementById("title").value = dataAllTasks.title;
   document.getElementById("description").value = dataAllTasks.description;
   document.getElementById("due-date").value = dataAllTasks.dueDate;
-  if (dataAllTasks.is_complated === true) {
+  if (dataAllTasks.is_completed === true) {
     document.getElementById("completed").setAttribute("selected", "true");
   } else {
     document.getElementById("not-completed").setAttribute("selected", "true");
   }
 
-  console.log("hehe berhasil", id);
+  console.log("hehe berhasil", dataAllTasks.is_completed);
 }
 
 editForm.addEventListener("submit", (event) => {

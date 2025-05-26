@@ -16,6 +16,9 @@ createForm.addEventListener("submit", (e) => {
   }
   const dueDate = document.getElementById("due-date").value;
 
+  
+
+
   DataTodosManager.addCreateTasks(title, description, status, dueDate);
   createForm.reset();
 });

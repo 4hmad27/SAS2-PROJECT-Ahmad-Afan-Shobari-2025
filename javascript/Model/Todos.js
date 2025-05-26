@@ -15,10 +15,10 @@ class TodoList {
           }
         );
         if (deleteUser.ok) {
-          alert(`data user dengan id ${id} berhasil dihapus`);
+          alert(`data dengan id ${id} berhasil dihapus`);
         } else {
           alert(
-            `data user dengan id ${id} gagal dihapus :${deleteUser.status}`
+            `data dengan id ${id} gagal dihapus :${deleteUser.status}`
           );
         }
         window.location.href = "./all-tasks.html";
@@ -59,7 +59,7 @@ class TodoList {
       console.log(data);
       
       window.location.href = "./all-tasks.html";
-      alert(`data user dengan id ${id} berhasil diupdate`);
+      alert(`data dengan id ${id} berhasil diupdate`);
     } catch (error) {
       console.error("error while editing data:", error);
     }
@@ -69,6 +69,9 @@ class TodoList {
   async addCreateTasks(title, description, status, dueDate) {
     try {
       console.log(title, description, status, dueDate);
+      if(!title, !description, !status, !dueDate){
+        throw new alert("halah eroro", error)
+      }
 
       const response = await fetch(
         "https://68258f1d0f0188d7e72d6675.mockapi.io/api/todos",
@@ -93,6 +96,9 @@ class TodoList {
 
       const data = await response.json();
       console.log(data);
+
+      alert(`data berhasil di tambahkan`);
+      window.location.href = "./all-tasks.html";
     } catch (error) {
       console.log("error adding in database:", error);
     }
