@@ -95,15 +95,12 @@ editForm.addEventListener("submit", (event) => {
 
   DataTodoListManagers.editAllTasks(oldId, title, description, status, dueDate);
 
-  window.location.href = "./all-tasks.html";
 });
 
 //function delete
 function deleteAllTasks(id) {
   DataTodoListManagers.deleteAllTasks(id);
   
-  
-  // renderAllTasks()
 }
 
 document.addEventListener("DOMContentLoaded", () => {
