@@ -21,6 +21,7 @@ class TodoList {
             `data user dengan id ${id} gagal dihapus :${deleteUser.status}`
           );
         }
+        window.location.href = "./all-tasks.html";
       }
     } catch (error) {
       console.error("error while delete data:", error);

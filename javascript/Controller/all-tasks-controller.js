@@ -102,7 +102,8 @@ editForm.addEventListener("submit", (event) => {
 function deleteAllTasks(id) {
   DataTodoListManagers.deleteAllTasks(id);
   
-  window.location.href = "./all-tasks.html";
+  
+  // renderAllTasks()
 }
 
 document.addEventListener("DOMContentLoaded", () => {
