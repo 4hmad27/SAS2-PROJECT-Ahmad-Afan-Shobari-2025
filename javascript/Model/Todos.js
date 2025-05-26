@@ -1,22 +1,6 @@
-// import { renderAllTasks } from "../Controller/all-tasks-controller.js";
-class TodoList {
-  async getAllTasks() {
-    try {
-      return await fetch(
-        "https://68258f1d0f0188d7e72d6675.mockapi.io/api/todos",
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      ).then((response) => response.json());
-    } catch (error) {
-      console.log("error while getting data", error);
-    }
-  }
-  
+class TodoList {  
 
+  //function delete
   async deleteAllTasks(id) {
     try {
       const isConfirm = confirm(
@@ -43,6 +27,7 @@ class TodoList {
     }
   }
 
+  //function edit
   async editAllTasks(id, title, description, status, date) {
     try {
       console.log(id, title, description, status, date);
@@ -77,6 +62,7 @@ class TodoList {
     }
   }
 
+  //function add
   async addCreateTasks(title, description, status, dueDate) {
     try {
       console.log(title, description, status, dueDate);
